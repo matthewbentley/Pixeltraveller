@@ -1,3 +1,5 @@
+NOTE: May contain my personal GA, Disqus, AddThis, etc codes.  You should check that stuff before using this
+
 Pixeltraveller
 ==============
 
