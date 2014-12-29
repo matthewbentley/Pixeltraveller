@@ -447,6 +447,24 @@ body .close{
 
 }
 
+.header_pixel .blogabout_pixel{
+
+	position: relative;
+
+	z-index: 10;
+
+	padding: 1em 0.5em;
+	margin-top: 0px;
+
+	text-align: center;
+	/*font-size:0.8em;*/
+	font-weight: 400;
+	color: #ffffff;
+
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+
+}
+
 /*MAIN PAGE, INDEX*/
 
 @-webkit-keyframes largein {
