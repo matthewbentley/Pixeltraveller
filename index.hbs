@@ -21,14 +21,13 @@
 						</h1>
 
 						<time class="date_pixel" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
-							
+
 							<span class="icon-clock"></span>{{date published_at timeago="true"}} {{#if tags}} <span>in</span> {{tags separator=" / "}} {{/if}}
 
 						</time>
 
 						<div class="preview_image">
-
-							<a class="read_more" href="#{{{url}}}"><img src="{{image}}" /></a>
+                        {{#if image}}<a class="read_more" href="#{{{url}}}"><img src="{{image}}" /></a>{{/if}}
 
 						</div>
 
