@@ -332,7 +332,7 @@ function url_load(url){
     share_links['email-share'] = 'mailto:?body=';
 
     onclick_one = "window.open('"
-    onclick_two = "','_blank','location=yes,height=570,width=520,scrollbars=yes,status=yes')"
+    onclick_two = "','_blank','location=yes,height=570,width=520,scrollbars=yes,status=yes'); $('#share-right').removeClass('visible').animate({'margin-right':'-48px'}); $('#open-button').removeClass('fa-rotate-180');"
 
     $('.share-replace').each(function(){
         $(this).attr('onclick',onclick_one + share_links[
@@ -392,7 +392,10 @@ function url_load(url){
 }
 
 	</script>
-    <div class="share-right">
+    <a id="opener" class="float-right">
+      <i id="open-button" class="fa fa-caret-square-o-left fa-lg"></i>
+    </a>
+    <div id="share-right" class="float-right">
       <a id="fb-share" class="share-link share-replace fa fa-facebook-square fa-3x" onclick="">
       </a>
       <a id="twitter-share" class="share-link share-replace fa fa-twitter-square fa-3x" onclick="">
@@ -401,12 +404,26 @@ function url_load(url){
       </a>
       <a id="hn-share" class="share-link share-replace fa fa-hacker-news fa-3x" onclick="">
       </a>
-      <a id="email-share" class="share-link fa fa-envelope-square fa-3x" onclick="">
+      <a id="email-share" class="share-link fa fa-envelope-square fa-3x" onclick="$('#share-right').removeClass('visible').animate({'margin-right':'-48px'}); $('#open-button').removeClass('fa-rotate-180');">
       </a>
       <a id="rss-share" class="share-link fa fa-rss-square fa-3x" href="/rss">
       </a>
 
     </div>
+    <script type="text/javascript">
+    $('#opener').on('click', function() {
+        var panel = $('#share-right');
+        var button = $('#open-button');
+        if (panel.hasClass("visible")) {
+            panel.removeClass('visible').animate({'margin-right':'-48px'});
+            button.removeClass('fa-rotate-180');
+        } else {
+            panel.addClass('visible').animate({'margin-right':'0px'});
+            button.addClass('fa-rotate-180');
+        }
+        return false;
+    });
+    </script>
 
   </body>
 
