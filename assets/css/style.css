@@ -74,7 +74,7 @@ body .cover{
 	position: fixed;
 	top:0;
 	left:0;
-	opacity:0.8;
+	/*opacity:0.8;*/
 	z-index: 100;
 
 	width:100%;
@@ -231,7 +231,7 @@ body .close{
 
 	margin: 0px;
 
-	opacity: 0.85;
+	/*opacity: 0.85;*/
 
 	-webkit-transition: left 0.2s ease-out;
 	-moz-transition: left 0.2s ease-out;
@@ -283,7 +283,7 @@ body .close{
 
 	.header_pixel .cover_pixel{
 
-		opacity: 0.65;
+		/*opacity: 0.65;*/
 
 	}
 
@@ -348,7 +348,7 @@ body .close{
 	left: 0.5em;
 	z-index: 10;
 
-	opacity: 0.95;
+	/*opacity: 0.95;*/
 
 	padding: 0.5em;
 
@@ -419,7 +419,7 @@ body .close{
 
 	opacity: 1;
 
-	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+	text-shadow: 1px 1px 2px rgba(0,0,0,1);
 
 }
 
@@ -443,7 +443,7 @@ body .close{
 	font-weight: 400;
 	color: #ffffff;
 
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
 
 }
 
@@ -460,7 +460,7 @@ body .close{
 	font-weight: 400;
 	color: #ffffff;
 
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
 
 }
 
@@ -675,7 +675,7 @@ body .close{
 	display: block;
 	margin: 0px;
 
-	opacity: 0.9;
+	/*opacity: 0.9;*/
 
 }
 
@@ -751,7 +751,7 @@ body .close{
 
 .post.main_pixel #header_img{
 
-	height: 300px;
+    /*height: 300px;*/
 	max-height: 300px;
 
 	padding:0em;
@@ -762,22 +762,22 @@ body .close{
 
 	background-color: #ffffff;
 
-	background: #ef4836; /* Old browsers */
-	background: -moz-linear-gradient(-45deg,  #ef4836 0%, #f4d03f 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ef4836), color-stop(100%,#f4d03f)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(-45deg,  #ef4836 0%,#f4d03f 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-45deg,  #ef4836 0%,#f4d03f 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(-45deg,  #ef4836 0%,#f4d03f 100%); /* IE10+ */
-	background: linear-gradient(135deg,  #ef4836 0%,#f4d03f 100%); /* W3C */
+    /*background: #ef4836; /* Old browsers */
+	/*background: -moz-linear-gradient(-45deg,  #ef4836 0%, #f4d03f 100%); /* FF3.6+ */
+	/*background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ef4836), color-stop(100%,#f4d03f)); /* Chrome,Safari4+ */
+	/*background: -webkit-linear-gradient(-45deg,  #ef4836 0%,#f4d03f 100%); /* Chrome10+,Safari5.1+ */
+	/*background: -o-linear-gradient(-45deg,  #ef4836 0%,#f4d03f 100%); /* Opera 11.10+ */
+	/*background: -ms-linear-gradient(-45deg,  #ef4836 0%,#f4d03f 100%); /* IE10+ */
+	/*background: linear-gradient(135deg,  #ef4836 0%,#f4d03f 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef4836', endColorstr='#f4d03f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
 
 .post.main_pixel #header_img img{
 
-	opacity: 0.9;
+	/*opacity: 0.9;*/
 
-	min-height: 300px;
+	/*min-height: 300px;*/
 
 }
 
@@ -1021,7 +1021,7 @@ body .close{
 
 .post .postcontent_pixel .image_wrap img, .post .postcontent_pixel .image_wrap_large img{
 
-	opacity: 0.95;
+	/*opacity: 0.95;*/
 	display: block;
 
 	width: 100%;
@@ -1032,8 +1032,8 @@ body .close{
 
 .post .postcontent_pixel .image_wrap img:hover, .post .postcontent_pixel .image_wrap_large img:hover{
 
-	-webkit-animation: opacity_trans 2s infinite;
-	animation: opacity_trans 2s infinite;
+    /*-webkit-animation: opacity_trans 2s infinite;*/
+    /*animation: opacity_trans 2s infinite;*/
 
 }
 
