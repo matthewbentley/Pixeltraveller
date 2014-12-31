@@ -332,7 +332,7 @@ function url_load(url){
     share_links['email-share'] = 'mailto:?body=';
 
     onclick_one = "window.open('"
-    onclick_two = "','_blank','location=yes,height=570,width=520,scrollbars=yes,status=yes'); $('#share-right').removeClass('visible').animate({'margin-right':'-48px'}); $('#open-button').removeClass('fa-rotate-180');"
+    onclick_two = "','_blank','location=yes,height=570,width=520,scrollbars=yes,status=yes'); close_share();"
 
     $('.share-replace').each(function(){
         $(this).attr('onclick',onclick_one + share_links[
@@ -404,24 +404,40 @@ function url_load(url){
       </a>
       <a id="hn-share" class="share-link share-replace fa fa-hacker-news fa-3x" onclick="">
       </a>
-      <a id="email-share" class="share-link fa fa-envelope-square fa-3x" onclick="$('#share-right').removeClass('visible').animate({'margin-right':'-48px'}); $('#open-button').removeClass('fa-rotate-180');">
+      <a id="email-share" class="share-link fa fa-envelope-square fa-3x" onclick="close_share();">
       </a>
       <a id="rss-share" class="share-link fa fa-rss-square fa-3x" href="/rss">
       </a>
 
     </div>
     <script type="text/javascript">
+
+var panel = $('#share-right');
+var button = $('#open-button');
+var opener = $('#opener');
+
+function open_share() {
+    panel.addClass('visible').animate({'margin-right':'0px'});
+    if ($(document).height() > 400) {
+        opener.addClass('up').animate({'bottom':'298px'});
+    } else {
+        opener.addClass('up').animate({'bottom':'154px'});
+    }
+    button.addClass('fa-caret-square-o-right');
+    button.removeClass('fa-caret-square-o-left');
+}
+function close_share() {
+    panel.removeClass('visible').animate({'margin-right':'-96px'});
+    opener.removeClass('up').animate({'bottom':'5%'});
+    button.addClass('fa-caret-square-o-left');
+    button.removeClass('fa-caret-square-o-right');
+}
+
     $('#opener').on('click', function() {
-        var panel = $('#share-right');
-        var button = $('#open-button');
         if (panel.hasClass("visible")) {
-            panel.removeClass('visible').animate({'margin-right':'-96px'});
-            button.addClass('fa-caret-square-o-left');
-            button.removeClass('fa-caret-square-o-right');
+            close_share();
         } else {
-            panel.addClass('visible').animate({'margin-right':'0px'});
-            button.addClass('fa-caret-square-o-right');
-            button.removeClass('fa-caret-square-o-left');
+            open_share();
         }
         return false;
     });
