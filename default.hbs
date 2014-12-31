@@ -220,8 +220,6 @@ $(document).on('click', "body .cover", function(){
 	$('.close').remove();
 	$('.cover').remove();
 
-	$('.footer_pixel').css({'position':'relative','bottom':''});
-
 	$(window).trigger('resize');
 
 });
@@ -231,8 +229,6 @@ $(document).on('click', "body .close", function(){
 	$('.gallery-image').remove();
 	$('.close').remove();
 	$('.cover').remove();
-
-	$('.footer_pixel').css({'position':'relative','bottom':''});
 
 	$(window).trigger('resize');
 
@@ -392,6 +388,12 @@ function url_load(url){
 		        $(window).trigger('resize');
 
 		    },250);
+
+            $("img").load(function() {
+                $(window).trigger('resize');
+            });
+
+
 
 		});
 
