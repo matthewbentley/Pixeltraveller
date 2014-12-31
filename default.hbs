@@ -416,10 +416,12 @@ function url_load(url){
         var button = $('#open-button');
         if (panel.hasClass("visible")) {
             panel.removeClass('visible').animate({'margin-right':'-96px'});
-            button.removeClass('fa-rotate-180');
+            button.addClass('fa-caret-square-o-left');
+            button.removeClass('fa-caret-square-o-right');
         } else {
             panel.addClass('visible').animate({'margin-right':'0px'});
-            button.addClass('fa-rotate-180');
+            button.addClass('fa-caret-square-o-right');
+            button.removeClass('fa-caret-square-o-left');
         }
         return false;
     });
