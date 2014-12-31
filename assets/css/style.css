@@ -1237,6 +1237,8 @@ body .close{
 
 }
 
+/*Sharing buttons*/
+
 .float-right {
    position: fixed;
    z-index: 100020;
@@ -1246,7 +1248,7 @@ body .close{
 
 #share-right {
    bottom: 20%;
-   margin-right: -48px;
+   margin-right: -96px;
    width: 48px;
 }
 
@@ -1258,4 +1260,12 @@ body .close{
    cursor: pointer;
    margin-right: 8px;
    bottom: 5%;
+}
+
+@media only screen and (max-height: 400px) {
+   #share-right {
+      bottom: 20%;
+      margin-right: -96px;
+      width: 96px;
+   }
 }
