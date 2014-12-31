@@ -160,6 +160,14 @@ $(window).resize(function(){
 
 	}
 
+    if ($('#opener').hasClass('up')) {
+        if ($(document).height() > 400) {
+            $('#opener').css({'bottom':'298px'});
+        } else {
+            $('#opener').css({'bottom':'154px'});
+        }
+    }
+
 	preview_resize();
 
 	$(window).scrollTop(scroll);
