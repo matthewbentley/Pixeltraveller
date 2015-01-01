@@ -1,10 +1,10 @@
 <div role='banner' class="header_pixel">
 
 	{{#if @blog.cover}}<img class="cover_pixel" src="{{@blog.cover}}" alt="{{@blog.title}}" />{{/if}}
-	
+
 	<h1 class="blogtitle_pixel">
 
-		{{{@blog.title}}}
+		<a class="blogtitle_pixel" href="/#">{{{@blog.title}}}</a>
 
 	</h1>
 
@@ -14,6 +14,6 @@
 
 	</p>
 
-        <p class="blogabout_pixel"><a class="blogabout_pixel" href="/about">About</a></p>
+        <p class="blogabout_pixel"><a class="blogabout_pixel" href="/#about">About</a></p>
 
 </div>

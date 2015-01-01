@@ -16,7 +16,7 @@
 	font-style: normal;
 	font-weight: normal;
 	speak: none;
- 
+
 	display: inline-block;
 	text-decoration: inherit;
 	width: 1em;
@@ -33,14 +33,14 @@
 .icon-rss:before { content: '\e804'; }
 .icon-tag:before { content: '\e805'; }
 
-body { 
+body {
 
-	display:table; 
+	display:table;
 	background-color:#f5f5f5;
 	font-family:'Courier New',monospace,sans-serif;
-	font-size: 16px; 
-	max-width: 1200px; 
-	margin: 0 auto !important; 
+	font-size: 16px;
+	max-width: 1200px;
+	margin: 0 auto !important;
 	margin-top: 1em !important;
 	padding:0em 1em 1em 1em;
 	overflow: hidden;
@@ -377,7 +377,7 @@ body .close{
 
 	border-bottom: 1px solid rgba(0,0,0,0.2);
 	border-right: 1px solid rgba(0,0,0,0.2);
-	
+
 }
 
 .loading{
@@ -435,7 +435,7 @@ body .close{
 
 	z-index: 10;
 
-	padding: 1em 0.5em;
+	padding: 1em 0.5em 0em 0.5em;
 	margin-top: 0px;
 
 	text-align: center;
@@ -453,7 +453,6 @@ body .close{
 
 	z-index: 10;
 
-	padding: 1em 0.5em;
 	margin-top: 0px;
 
 	text-align: center;
@@ -708,7 +707,7 @@ body .close{
 	display: block;
 
 	margin-top: 0.5em;
-	padding:0.2em 0.2em; 
+	padding:0.2em 0.2em;
 
 	text-align: center;
 	font-weight: 300;
@@ -961,7 +960,7 @@ body .close{
 
 	float:left;
 	width: 100%;
-	
+
 }
 
 .post .postcontent_pixel .image_wrap_large{
@@ -1083,8 +1082,8 @@ body .close{
 
 	border: 1px solid #ffffff;
 
-	-webkit-border-radius: 12px; 
-	-moz-border-radius: 12px; 
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
 	border-radius: 12px;
 
 }
@@ -1174,13 +1173,13 @@ body .close{
 .pagination_pixel .pagination{
 
 	display:inline-block;
-	
+
 }
 
 .pagination_pixel .pagination a{
 
 	padding: 0.5em;
-	
+
 	background-color: #26C281;
 
 	color: #ffffff;
@@ -1195,7 +1194,7 @@ body .close{
 
 	border-bottom: 1px solid rgba(0,0,0,0.2);
 	border-right: 1px solid rgba(0,0,0,0.2);
-	
+
 }
 
 /*FOOTER*/
