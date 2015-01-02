@@ -375,6 +375,15 @@ function url_load(url){
 
 		    });
 
+            $(".article_pixel a").each(function() {
+                if ($(this).context.href.contains(window.location.origin) &&
+                    !$(this).context.href.contains('author') &&
+                    !$(this).context.href.contains('#'))
+                {
+                    $(this).attr('href','#'+$(this).attr('href'));
+                }
+            });
+
 		    $('#load').scrollTop(0);
 
 		    //img_check();
