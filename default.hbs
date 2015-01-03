@@ -243,7 +243,7 @@ function img_contain(){
 function fix_links() {
     $('a').each(function() {
         if ($(this).context.hostname == window.location.hostname &&
-            ($(this).context.id != 'rss-share' ||
+            ($(this).context.id != 'rss-share' &&
              $(this).context.id != 'rss-link')) {
             var href = $(this).context.href;
             var title = $(this).context.innerHTML.trim();
