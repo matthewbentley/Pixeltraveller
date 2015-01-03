@@ -61,7 +61,7 @@ body {
 img{width:100%;margin:0px;}
 h1,h2{font-family: 'Open Sans'}
 
-a{color:#2c3e50; text-decoration: none;}
+a{color:#2c3e50; text-decoration: none; cursor: pointer;}
 a:hover{color:#f39c12;}
 
 *,*:before,*:after {
@@ -341,7 +341,7 @@ body .close{
 
 #back{
 
-	display: none;
+    display: block;
 
 	position: absolute;
 	top: 0.5em;

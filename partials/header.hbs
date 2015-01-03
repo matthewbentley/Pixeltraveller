@@ -1,10 +1,14 @@
-<div role='banner' class="header_pixel">
+{{#is "post, page"}}
+<div role='banner' class="header_pixel small">
+{{else}}
+<div role='banner' class="header_pixel large">
+{{/is}}
 
 	{{#if @blog.cover}}<img class="cover_pixel" src="{{@blog.cover}}" alt="{{@blog.title}}" />{{/if}}
 
 	<h1 class="blogtitle_pixel">
 
-		<a class="blogtitle_pixel" href="/#">{{{@blog.title}}}</a>
+		<a class="blogtitle_pixel" href="/">{{{@blog.title}}}</a>
 
 	</h1>
 
@@ -14,6 +18,6 @@
 
 	</p>
 
-        <p class="blogabout_pixel"><a class="blogabout_pixel" href="/#about">About</a></p>
+        <p class="blogabout_pixel"><a class="blogabout_pixel" href="/about">About</a></p>
 
 </div>

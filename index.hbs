@@ -1,8 +1,11 @@
 {{!< default}}
+{{#is "post, page"}}
+<div id="load" class="large">
+{{else}}
+<div id="load" class="small">
+{{/is}}
 
-<div id="load">
-
-	<main class="main_pixel index" role="main">
+	<main class="main_pixel index" role="main" id="main_id">
 
 		{{#foreach posts}}
 
@@ -13,7 +16,7 @@
 					<header class="postheader_pixel">
 
 						<h1 class="posttitle_pixel" itemprop="headline">
-							<a href="#{{{url}}}" rel="bookmark">
+							<a href="{{{url}}}" rel="bookmark">
 
 								{{title}}
 
@@ -27,7 +30,7 @@
 						</time>
 
 						<div class="preview_image">
-                        {{#if image}}<a class="read_more" href="#{{{url}}}"><img src="{{image}}" /></a>{{/if}}
+                        {{#if image}}<a class="read_more" href="{{{url}}}"><img src="{{image}}" /></a>{{/if}}
 
 						</div>
 
@@ -35,7 +38,7 @@
 
 					<div class="postcontent_pixel" itemprop="articleBody">
 
-						<p>{{excerpt characters="150"}}... <a class="read_more" href="#{{{url}}}">Read more</a></p>
+						<p>{{excerpt characters="150"}}... <a class="read_more" href="{{{url}}}">Read more</a></p>
 
 					</div>
 
