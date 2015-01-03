@@ -24,7 +24,7 @@
 
   </head>
 
-  <body class="{{body_class}}">
+  <body class="{{body_class}} fix-js">
 
 	{{> header}}
 
@@ -75,7 +75,7 @@ $(window).resize(function(){
 	var scroll = $(window).scrollTop();
 
 	$('.header_pixel, #load').outerHeight($(window).innerHeight()-36);
-	$('.main_pixel').outerHeight('')
+	$('.main_pixel').outerHeight('');
 
 	if($('.main_pixel').outerHeight()+132 < $(window).innerHeight()){
         $('.main_pixel').outerHeight($('.main_pixel').parent().height());
@@ -259,6 +259,10 @@ function fix_links() {
             document.title = $(this).context.innerHTML.trim();
         });
     }
+
+    $('.fix-js').each(function() {
+        $(this).removeClass('fix-js');
+    });
 
 }
 

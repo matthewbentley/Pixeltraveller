@@ -1,7 +1,7 @@
 {{#is "post, page"}}
-<div role='banner' class="header_pixel small">
+<div role='banner' class="header_pixel small fix-js">
 {{else}}
-<div role='banner' class="header_pixel large">
+<div role='banner' class="header_pixel large fix-js">
 {{/is}}
 
 	{{#if @blog.cover}}<img class="cover_pixel" src="{{@blog.cover}}" alt="{{@blog.title}}" />{{/if}}

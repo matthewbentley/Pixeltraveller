@@ -1281,3 +1281,18 @@ body .close{
       bottom: 154px !important;
    }
 }
+
+
+/*Fix no-JS*/
+.fix-js {
+   overflow: visible;
+}
+
+.fix-js .header_pixel {
+   height: 1000px !important;
+   overflow: hidden !important;
+}
+
+.fix-js .footer_pixel {
+   position: relative !important;
+}
