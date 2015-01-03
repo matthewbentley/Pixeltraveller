@@ -42,7 +42,6 @@ history.navigationMode = 'compatible';
 
 $(document).ready(function() {
     setTimeout(function() {
-        $(window).trigger('resize');
         fix_links();
     }, 250);
 });
@@ -134,7 +133,6 @@ $(window).resize(function(){
 		$('.gallery-image').css({'left': left, 'top':top});
 
 	}
-
 
 	preview_resize();
 
@@ -264,6 +262,8 @@ function fix_links() {
     $('.fix-js').each(function() {
         $(this).removeClass('fix-js');
     });
+
+    $(window).trigger('resize');
 
 }
 
