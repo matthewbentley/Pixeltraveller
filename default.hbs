@@ -318,7 +318,8 @@ function url_load(url){
             console.log(window.location.pathname);
 	        if (window.location.pathname == "/" ||
                 window.location.pathname.startsWith('/tag/') ||
-                window.location.pathname.startsWith('/author/')) {
+                window.location.pathname.startsWith('/author/') ||
+                window.location.pathname.startsWith('/page/')) {
 		        $('#back').css('display','none');
 		        $('.header_pixel').removeClass('small').addClass('large');
 		        $('#load').removeClass('large').addClass('small');
@@ -351,7 +352,6 @@ function url_load(url){
             $("img").load(function() {
                 $(window).trigger('resize');
             });
-
 
             fix_links();
 
