@@ -1,4 +1,4 @@
-NOTE: May contain my personal GA, Disqus, AddThis, etc codes.  You should check that stuff before using this
+NOTE: This project now uses git submodules for history.js.  When cloning, please us `git clone --recursive`
 
 Pixeltraveller
 ==============
