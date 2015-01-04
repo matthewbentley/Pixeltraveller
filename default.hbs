@@ -338,9 +338,9 @@ function url_load(url){
 		    $(window).trigger('resize');
             console.log(window.location.pathname);
 	        if (window.location.pathname == "/" ||
-                window.location.pathname.startsWith('/tag/') ||
-                window.location.pathname.startsWith('/author/') ||
-                window.location.pathname.startsWith('/page/')) {
+                window.location.pathname.search('/tag/') == 0 ||
+                window.location.pathname.search('/author/') == 0 ||
+                window.location.pathname.search('/page/') == 0) {
 		        $('#back').css('display','none');
 		        $('.header_pixel').removeClass('small').addClass('large');
 		        $('#load').removeClass('large').addClass('small');
