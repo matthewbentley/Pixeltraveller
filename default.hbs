@@ -238,7 +238,30 @@ function img_contain(){
 
 }
 
+function share_links() {
+    var share_links = new Array();
+
+    share_links['fb-share'] = '//facebook.com/sharer/sharer.php?u=';
+    share_links['twitter-share'] = '//twitter.com/home?status=';
+    share_links['reddit-share'] = '//www.reddit.com/submit?url=';
+    share_links['hn-share'] = '//news.ycombinator.com/submitlink?u=';
+    share_links['email-share'] = 'mailto:?body=';
+
+    onclick_one = "window.open('"
+    onclick_two = "','_blank','location=yes,height=570,width=520,scrollbars=yes,status=yes'); close_share();"
+
+    $('.share-replace').each(function(){
+        $(this).attr('onclick',onclick_one + share_links[
+            $(this).context.attributes.id.value
+        ] + encodeURIComponent(window.location) + onclick_two)
+    });
+
+    $('#email-share').attr('href', share_links['email-share'] + encodeURIComponent(window.location + '\n'));
+
+}
+
 function fix_links() {
+    share_links();
     $('a').each(function() {
         if ($(this).context.hostname == window.location.hostname &&
             ($(this).context.id != 'rss-share' &&
@@ -288,25 +311,6 @@ function url_load(url){
 	}
 
 	$('#load .main_pixel').removeClass('done').addClass('loading');
-
-    var share_links = new Array();
-
-    share_links['fb-share'] = '//facebook.com/sharer/sharer.php?u=';
-    share_links['twitter-share'] = '//twitter.com/home?status=';
-    share_links['reddit-share'] = '//www.reddit.com/submit?url=';
-    share_links['hn-share'] = '//news.ycombinator.com/submitlink?u=';
-    share_links['email-share'] = 'mailto:?body=';
-
-    onclick_one = "window.open('"
-    onclick_two = "','_blank','location=yes,height=570,width=520,scrollbars=yes,status=yes'); close_share();"
-
-    $('.share-replace').each(function(){
-        $(this).attr('onclick',onclick_one + share_links[
-            $(this).context.attributes.id.value
-        ] + encodeURIComponent(window.location) + onclick_two)
-    });
-
-    $('#email-share').attr('href', share_links['email-share'] + encodeURIComponent(window.location + '\n'));
 
     // Do the actual loading...
     setTimeout(function(){
