@@ -868,7 +868,7 @@ body .close{
 .post .postcontent_pixel p{
 
 	width: 100%;
-	float: left;
+    /*float: left;*/
 
 	padding:0em;
 	margin: 0.75em 0em;
