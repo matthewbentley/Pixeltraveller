@@ -30,7 +30,11 @@
 						</time>
 
 						<div class="preview_image">
-                        {{#if image}}<a class="read_more" href="{{{url}}}"><img src="{{image}}" /></a>{{/if}}
+                        {{#if image}}
+                        <div class="read_more">
+                          <img src="{{image}}" />
+                        </div>
+                        {{/if}}
 
 						</div>
 
