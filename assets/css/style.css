@@ -464,6 +464,10 @@ body .close{
 
 }
 
+.blogabout_pixel a:hover, .blogtitle_pixel a:hover {
+   text-decoration: underline;
+}
+
 /*MAIN PAGE, INDEX*/
 
 @-webkit-keyframes largein {
