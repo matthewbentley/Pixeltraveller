@@ -284,7 +284,7 @@ function fix_links() {
         if ($(this).context.hostname == window.location.hostname &&
             ($(this).context.id != 'rss-share' &&
              $(this).context.id != 'rss-link' &&
-             $(this).content.id != 'cv')) {
+             $(this).context.id != 'cv')) {
             var href = $(this).context.href;
             var title = $(this).context.innerHTML.trim();
             if (title == "&lt;- Home") {
